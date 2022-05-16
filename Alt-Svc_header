@@ -1,5 +1,5 @@
-# If you do a "curl --head" for a website running over you will notice the "Alt-Svc" header. Basically the server tells the browser that it has the capibality to use HTTP version 3 which
-# runs over the QUIC ptotocol.   
+# If you do a "curl --head" for a website running over you will notice the "Alt-Svc" header. Basically the server tells the browser that it has the capibality to use HTTP 
+# version 3 which runs over the QUIC protocol which in turn runs over the UDP protocol. If the browser also supports it they are able to establish a QUIC connection. 
 
 C:\>curl --head https://www.dialogue-express.com
 HTTP/1.1 200 OK
