@@ -1,0 +1,25 @@
+# If you do a "curl --head" for a website running over you will notice the "Alt-Svc" header. Basically the server tells the browser that it has the capibality to use HTTP version 3 which
+# runs over the QUIC ptotocol.   
+
+C:\>curl --head https://www.dialogue-express.com
+HTTP/1.1 200 OK
+Date: Mon, 16 May 2022 13:15:39 GMT
+Content-Type: text/html; charset=UTF-8
+Content-Length: 589447
+link: <https://static.parastorage.com/>; rel=preconnect; crossorigin;,<https://static.parastorage.com/>; rel=preconnect;,<https://fonts.gstatic.com>; rel=preconnect; crossorigin;,<https://static.wixstatic.com/>; rel=preconnect; crossorigin;,<https://static.wixstatic.com/>; rel=preconnect;,<https://siteassets.parastorage.com>; rel=preconnect; crossorigin;,
+etag: W/"3bdc561e67ba880eadc208d7db2efc13"
+content-language: en-US
+strict-transport-security: max-age=3600
+Age: 27317
+Set-Cookie: ssr-caching=cache#desc=hit#varnish=hit#dc#desc=as1; Max-Age=20; Expires=Mon, 16 May 2022 05:40:41 GMT
+Server-Timing: cache;desc=hit, varnish;desc=hit, dc;desc=as1
+X-Seen-By: GXNXSWFXisshliUcwO20NZL9Lwun+M+7c/tw2Pto8/G8uk2lah81TgB2iCMDgwFC,qquldgcFrj2n046g4RNSVIwWrg7mZz30eRfiNDqLzOM=,2d58ifebGbosy5xc+FRalio9FHSyiq+Rg+/uXzUHzlgnkUEAbONcthZz/Fe3mBKbGw94ZN+IUvFfHCeCyNSpl3BQ5Dixd8vvMLmuoHQCdJI=,2UNV7KOq4oGjA5+PKsX47L9nvRxLZODmt80baZnvg4o=
+Cache-Control: no-cache
+Vary: Accept-Encoding
+Accept-Ranges: bytes
+X-Wix-Request-Id: 1652706939.548211557848222771
+X-Content-Type-Options: nosniff
+Server: Pepyaka/1.19.10
+Via: 1.1 google
+x-wix-google-ccm: 1
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
