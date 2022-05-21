@@ -1,5 +1,11 @@
-# If you do a "curl --head" for a website running that uses QUIC you will notice the "Alt-Svc" header. Basically the server tells the browser that it has the capibality to use HTTP 
-# version 3 which runs over the QUIC protocol which in turn runs over the UDP protocol. If the browser also supports it they are able to establish a QUIC connection. 
+# While doing some testing I noticed that a website was running over the QUIC protocol. On taking a wireshark capture I could see that the initially the traffic was
+# was over TCP and TLS and then switched over to QUIC and UDP port 443. So I though I would dig into it a little bit. 
+
+# If you run a "curl --head" for a website that is hosted on a platform that supports the QUIC protocol, like GCP, you will notice the "Alt-Svc" header. Basically the 
+# server tells the browser that it has the capibality to use HTTP version 3 which runs over the QUIC protocol which in turn runs over the UDP protocol. If the browser 
+# also supports it they are able to establish a QUIC connection. 
+
+# The capture has been added to the repository as well. 
 
 C:\>curl --head https://www.dialogue-express.com
 HTTP/1.1 200 OK
